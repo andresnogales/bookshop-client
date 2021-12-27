@@ -1,0 +1,32 @@
+.item {
+  width: 12rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.image {
+  width: 10rem;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: 600;
+  color: #ff4500;
+  margin-bottom: 0.5rem;
+}
