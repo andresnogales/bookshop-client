@@ -23,17 +23,14 @@
   flex-direction: row;
 }
 
-.nav__item {
-  margin: 0 1rem;
-}
-
-.nav__link:link,
-.nav__link:visited {
+.nav a:link,
+.nav a:visited {
   color: #000;
   text-decoration: none;
+  margin: 1rem;
 }
 
-.nav__link:hover {
+.nav a:hover {
   color: #ff7b4b;
 }
 

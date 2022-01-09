@@ -9,9 +9,10 @@ const BooksList = (props) => {
         return (
           <BookItem
             key={book.id}
-            image={book.image}
+            id={book.id}
+            image={book.picture}
             title={book.title}
-            author={book.author}
+            author={book.author.fullName}
             price={book.price}
           />
         );

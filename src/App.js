@@ -1,8 +1,14 @@
 import { Fragment } from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+
 import "./App.css";
 import BooksList from "./components/Books/BooksList";
 import Header from "./components/Layout/Header";
 import Main from "./components/Layout/Main";
+import Sidebar from "./components/Layout/Sidebar";
+import Details from "./pages/Details";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
   const dummyBooks = [
@@ -40,12 +46,25 @@ function App() {
   ];
 
   return (
-    <Fragment>
-      <Header />
-      <Main>
-        <BooksList items={dummyBooks}></BooksList>
-      </Main>
-    </Fragment>
+    <BrowserRouter>
+      <Header>
+        <Link to="/">Home</Link>
+        <Link to="/login">Login</Link>
+      </Header>
+      <main className="main">
+        <div className="content">
+          <Routes>
+            <Route path="/details/:id" element={<Details />} />
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/"
+              exact={true}
+              element={<Home items={dummyBooks} />}
+            />
+          </Routes>
+        </div>
+      </main>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,12 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.link,
+.link:focus,
+.link:visited {
+  text-decoration: none;
+  color: #000;
+  padding: 0.5rem;
+}

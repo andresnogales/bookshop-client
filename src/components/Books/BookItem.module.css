@@ -18,6 +18,18 @@
   margin-bottom: 0.5rem;
 }
 
+.title-link:link,
+.title-link:visited {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.title-link:hover {
+  color: #ff4500;
+}
+
 .author {
   font-size: 0.8rem;
   text-transform: uppercase;
