@@ -7,6 +7,7 @@ const BookDetails = (props) => {
     <div className={classes.container}>
       <div className={classes.picture}>
         <img src={book.picture} alt={book.title} />
+        <button>Agregar al carrito</button>
       </div>
       <div className={classes.details}>
         <h2>{book.title}</h2>
@@ -15,7 +16,7 @@ const BookDetails = (props) => {
         <span>Formato: {book.format}</span>
         <span>ISBN: {book.isbn}</span>
 
-        <p>{book.description}</p>
+        <p className={classes.description}>{book.description}</p>
       </div>
     </div>
   );

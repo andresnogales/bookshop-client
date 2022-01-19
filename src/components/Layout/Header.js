@@ -1,9 +1,6 @@
 import classes from "./Header.module.css";
 import logo from "../../assets/logo.png";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import Login from "../../pages/Login";
-import Home from "../../pages/Home";
 const Header = (props) => {
   return (
     <header className={classes.header}>

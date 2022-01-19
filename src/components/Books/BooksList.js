@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import BookItem from "./BookItem";
 import classes from "./BooksList.module.css";
 

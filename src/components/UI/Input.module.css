@@ -1,0 +1,13 @@
+.input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  padding: 0.7rem 1rem;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: 1px solid #000;
+}

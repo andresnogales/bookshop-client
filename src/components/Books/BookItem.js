@@ -8,7 +8,7 @@ const BookItem = (props) => {
 
   return (
     <div className={classes.item} onClick={itemClickHadler}>
-      <img className={classes.image} src={props.image} alt="item image" />
+      <img className={classes.image} src={props.image} alt="imagen de libro" />
       <div className={classes.title}>
         <Link className={classes["title-link"]} to={"/details/" + props.id}>
           {props.title}
