@@ -1,0 +1,32 @@
+.nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  list-style: none;
+  background-color: #18afa2;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.item {
+  margin: 0 1rem;
+}
+
+.item-link,
+.item-link:visited {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+
+.logout {
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import Input from "../UI/Input";
 
 import classes from "./LoginForm.module.css";
 import { login } from "../../actions/authActions.js";
+
+import Form from "react-bootstrap/Form";
+import Button from "../UI/Button";
 
 const LoginForm = (props) => {
   const [username, setUsername] = useState("");
@@ -29,8 +32,6 @@ const LoginForm = (props) => {
 
     setLoading(true);
 
-    console.log("Llamada a backend", username, password);
-
     dispatch(login(username, password))
       .then(() => {
         props.history.push("/");
@@ -46,31 +47,32 @@ const LoginForm = (props) => {
   }
 
   return (
-    <form className={classes.form} onSubmit={submitHandler}>
-      <div className={classes.container}>
-        <label className={classes.label}>Usuario:</label>
-        <Input
-          type="text"
-          name="username"
-          onChange={usernameInputHandler}
-        ></Input>
-        <label className={classes.label}>Contraseña:</label>
-        <Input
-          type="password"
-          name="password"
-          onChange={passwordInputHandler}
-        ></Input>
-
-        <button className={classes.button}>Ingresar</button>
-      </div>
-      {message && (
-        <div className="form-group">
-          <div className="alert alert-danger" role="alert">
-            {message}
-          </div>
+    <div className={classes.container}>
+      <form className={classes.form} onSubmit={submitHandler}>
+        <div className={classes.inputBox}>
+          <label>Username</label>
+          <Input
+            type="text"
+            name="username"
+            value=""
+            onChange={usernameInputHandler}
+          />
         </div>
-      )}
-    </form>
+        <div className={classes.inputBox}>
+          <label>Password</label>
+          <Input
+            type="password"
+            name="text"
+            value=""
+            onChange={passwordInputHandler}
+          />
+        </div>
+        <Button type="submit" label="Login" />
+        <div className={classes.error}>
+          {message ? <p>Usuario o contraseña incorrectos</p> : ""}
+        </div>
+      </form>
+    </div>
   );
 };
 
