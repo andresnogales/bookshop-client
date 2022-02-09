@@ -32,7 +32,7 @@ const Navbar = () => {
           )}
         </li>
         <li>
-          <Link className={classes["item-link"]} to="/cart">
+          <Link className={classes["item-link"]} to="/carrito">
             <NavbarCartButton />
           </Link>
         </li>

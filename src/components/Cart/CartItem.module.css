@@ -1,0 +1,22 @@
+.container {
+  margin: 1rem 0;
+  display: flex;
+}
+
+.details {
+  padding: 1rem;
+}
+
+.btn {
+  width: 20px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff4500;
+}
+
+.amount {
+  color: #000;
+}

@@ -16,9 +16,13 @@
 }
 
 .hero h1 {
-  font-size: 5em;
+  font-size: calc(4vw + 4vh + 2vmin);
   margin-top: 0;
   margin-bottom: 0.5em;
+}
+
+.hero h2 {
+  font-size: calc(1vw + 1vh + 2vmin);
 }
 
 .hero .btn {

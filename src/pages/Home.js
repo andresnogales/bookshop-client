@@ -13,6 +13,11 @@ const Home = (props) => {
     return book.featured === true;
   });
 
+  const latest =
+    books.length >= 5
+      ? books.slice(books.length - 5, books.length).reverse()
+      : books.reverse();
+
   useEffect(() => {
     dispatch(listBooks());
   }, [dispatch]);
@@ -20,7 +25,7 @@ const Home = (props) => {
   return (
     <Fragment>
       <BooksSection title="Destacados" items={featured} error={error} />
-      <BooksSection title="Últimos agregados" items={books} error={error} />
+      <BooksSection title="Últimos agregados" items={latest} error={error} />
     </Fragment>
   );
 };

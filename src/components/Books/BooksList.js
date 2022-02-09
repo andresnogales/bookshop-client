@@ -9,7 +9,7 @@ const BooksList = (props) => {
           <BookItem
             key={book.id}
             id={book.id}
-            image={book.picture}
+            picture={book.picture}
             title={book.title}
             author={book.author.fullName}
             price={book.price}

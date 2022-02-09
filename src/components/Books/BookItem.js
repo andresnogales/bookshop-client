@@ -12,6 +12,7 @@ const BookItem = (props) => {
       id: props.id,
       title: props.title,
       amount: amount,
+      picture: props.picture,
       price: props.price,
     });
   };
@@ -22,9 +23,13 @@ const BookItem = (props) => {
 
   return (
     <div className={classes.item}>
-      <img className={classes.image} src={props.image} alt="imagen de libro" />
+      <img
+        className={classes.picture}
+        src={props.picture}
+        alt="imagen de libro"
+      />
       <div className={classes.title}>
-        <Link className={classes["title-link"]} to={"/details/" + props.id}>
+        <Link className={classes["title-link"]} to={"/libro/" + props.id}>
           {props.title}
         </Link>
       </div>

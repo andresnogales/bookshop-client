@@ -4,12 +4,9 @@ const Hero = () => {
     <section className={classes["hero"]}>
       <div className={classes["hero-inner"]}>
         <h1>Tienda de Libros</h1>
-        <h2>
-          Encontrá el libro que estás buscando. Novelas, cuentos, infantiles,
-          historia, economía y más.
-        </h2>
+        <h2>Novelas, cuentos, infantiles,historia, economía y más.</h2>
         <a href="" className={classes["btn"]}>
-          Ver destacados
+          Pedí tu libro
         </a>
       </div>
     </section>

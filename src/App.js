@@ -12,24 +12,25 @@ import Login from "./pages/Login";
 
 function App() {
   return (
-    <BrowserRouter>
-      <CartProvider>
-        <Navbar />
-        <Header />
-
-        <main className="main">
-          <div className="wrapper">
-            <Routes>
-              <Route path="/details/:id" element={<Details />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/" exact={true} element={<Home />} />
-            </Routes>
-          </div>
-        </main>
-      </CartProvider>
-      <Footer />
-    </BrowserRouter>
+    <div className="app">
+      <BrowserRouter>
+        <CartProvider>
+          <Navbar />
+          <Header />
+          <main className="main">
+            <div className="wrapper">
+              <Routes>
+                <Route path="/libro/:id" element={<Details />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/carrito" element={<Cart />} />
+                <Route path="/" exact={true} element={<Home />} />
+              </Routes>
+            </div>
+          </main>
+        </CartProvider>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

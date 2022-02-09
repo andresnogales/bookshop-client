@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
+import Button from "../UI/Button";
 import CartItem from "./CartItem";
 
 const Cart = () => {
@@ -10,26 +11,32 @@ const Cart = () => {
   };
 
   const cartItemAddHandler = (item) => {
-    cartContext.addItem(item);
+    cartContext.addItem({ ...item, amount: 1 });
   };
 
   const cartItems = (
-    <ul>
+    <ul style={{ "list-style": "none" }}>
       {cartContext.items.map((item) => (
         <CartItem
           key={item.id}
-          name={item.name}
+          title={item.title}
+          picture={item.picture}
           amount={item.amount}
           price={item.price}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
           onAdd={cartItemAddHandler.bind(null, item)}
-        >
-          {item.name}
-        </CartItem>
+        />
       ))}
+      <h2>Total: ${cartContext.totalAmount}</h2>
+      <Button label="Ordenar" />
     </ul>
   );
-  return <div>{cartItems}</div>;
+  return (
+    <div>
+      <h1>Mi carrito</h1>
+      {cartContext.items.length > 0 ? cartItems : <p>No hay nada aquí</p>}
+    </div>
+  );
 };
 
 export default Cart;
